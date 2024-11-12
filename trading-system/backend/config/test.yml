@@ -1,0 +1,75 @@
+# Server Configuration
+server:
+  host: "0.0.0.0"
+  port: 8000
+  debug: true
+  reload: true
+
+# Database Configuration
+database:
+  host: "localhost"
+  port: 5432
+  name: "trading_system_test"
+  user: "postgres"
+  password: "postgres"
+  pool_size: 10
+  max_overflow: 5
+
+# API Configuration
+api:
+  version: "v1"
+  prefix: "/api"
+  cors_origins: ["http://localhost:3000"]
+
+# Market Data Configuration
+market_data:
+  providers:
+    - name: "yfinance"
+      enabled: true
+      rate_limit: 2000  # requests per hour
+    - name: "alpha_vantage"
+      enabled: false    # Disabled for testing
+
+# ML Configuration
+ml:
+  model_path: "./test_models"
+  training:
+    batch_size: 16
+    epochs: 10
+    validation_split: 0.2
+  inference:
+    batch_size: 32
+    threshold: 0.75
+
+# Monitoring Configuration
+monitoring:
+  prometheus:
+    enabled: false
+  grafana:
+    enabled: false
+
+# Logging Configuration
+logging:
+  level: "DEBUG"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/test.log"
+
+# Cache Configuration
+cache:
+  type: "memory"
+  ttl: 300  # seconds
+
+# WebSocket Configuration
+websocket:
+  enabled: true
+  path: "/ws"
+  ping_interval: 30
+  ping_timeout: 10
+
+# Security Configuration
+security:
+  jwt:
+    secret_key: "test_secret_key"
+    algorithm: "HS256"
+    access_token_expire_minutes: 30
+    refresh_token_expire_days: 1

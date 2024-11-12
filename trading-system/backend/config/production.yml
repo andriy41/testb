@@ -1,0 +1,81 @@
+# Server Configuration
+server:
+  host: "0.0.0.0"
+  port: 8000
+  debug: false
+  reload: false
+
+# Database Configuration
+database:
+  host: "${DB_HOST}"
+  port: "${DB_PORT}"
+  name: "${DB_NAME}"
+  user: "${DB_USER}"
+  password: "${DB_PASSWORD}"
+  pool_size: 50
+  max_overflow: 20
+
+# API Configuration
+api:
+  version: "v1"
+  prefix: "/api"
+  cors_origins: ["${FRONTEND_URL}"]
+
+# Market Data Configuration
+market_data:
+  providers:
+    - name: "yfinance"
+      enabled: true
+      rate_limit: 2000  # requests per hour
+    - name: "alpha_vantage"
+      enabled: true
+      rate_limit: 500   # requests per minute
+      api_key: "${ALPHA_VANTAGE_API_KEY}"
+
+# ML Configuration
+ml:
+  model_path: "/opt/trading/models"
+  training:
+    batch_size: 64
+    epochs: 200
+    validation_split: 0.2
+  inference:
+    batch_size: 128
+    threshold: 0.75
+
+# Monitoring Configuration
+monitoring:
+  prometheus:
+    enabled: true
+    port: 9090
+  grafana:
+    enabled: true
+    port: 3001
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "/var/log/trading/production.log"
+
+# Cache Configuration
+cache:
+  type: "redis"
+  host: "${REDIS_HOST}"
+  port: "${REDIS_PORT}"
+  ttl: 3600  # seconds
+
+# WebSocket Configuration
+websocket:
+  enabled: true
+  path: "/ws"
+  ping_interval: 30
+  ping_timeout: 10
+
+# Security Configuration
+security:
+  jwt:
+    secret_key: "${JWT_SECRET_KEY}"
+    algorithm: "HS256"
+    access_token_expire_minutes: 15
+    refresh_token_expire_days: 7

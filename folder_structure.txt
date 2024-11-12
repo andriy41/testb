@@ -1,0 +1,253 @@
+frontend/src/components/dashboard/
+├── MainDashboard.tsx                    <- "Main Trading Dashboard"
+├── TradingDashboard.tsx                 <- "Trading Signal Dashboard"
+├── MLTradingMonitor.tsx                 <- "ML Trading Monitor Dashboard"
+└── AdvancedAnalysisDashboard.tsx        <- "Advanced Trading Analysis Dashboard"
+
+frontend/src/components/charts/
+├── CandlestickChart.tsx                 <- "Interactive Candlestick Chart"
+├── InteractivePriceChart.tsx            <- "Interactive Price Chart Component"
+└── TechnicalChart.tsx                   <- "Technical Chart Component"
+
+frontend/src/components/panels/
+├── SignalsPanel.tsx                     <- "Trading Signals Panel"
+├── IndicatorsPanel.tsx                  <- "Technical Indicators Panel"
+├── AdvancedIndicatorsPanel.tsx          <- "Advanced Technical Analysis Panel"
+├── RiskManagementPanel.tsx              <- "Price Targets and Risk Management Panel"
+└── PriceTargetsPanel.tsx                <- "Price Target Display Panel"
+
+
+backend/src/data/
+├── market_data.py                       <- "YFinance Data Fetcher"
+└── data_manager.py                      <- "Enhanced Market Analysis System"
+
+backend/src/models/
+├── ml_models.py                         <- "Multi-Timeframe ML Trading System"
+└── signal_generator.py                  <- "ML Models and Signal Generation - Part 2"
+
+backend/src/risk/
+├── risk_manager.py                      <- "Risk Management and Position Sizing System"
+└── position_sizer.py                    <- "Price Target Calculator"
+
+backend/src/execution/
+└── execution_engine.py                  <- "Execution Engine and Order Management System"
+
+backend/src/monitoring/
+├── system_monitor.py                    <- "Advanced Monitoring and Detection Systems"
+└── market_monitor.py                    <- "Core Trading System Implementation - Part 1"
+
+backend/src/analysis/
+├── technical_analyzer.py                <- "Advanced Trading System Improvements"
+├── market_analyzer.py                   <- "System Integration and Deployment"
+├── fakeout_detector.py                  <- "Fakeout Detection System"
+└── manipulation_detector.py             <- "Market Manipulation Detection System"
+
+backend/config/
+└── production.yml                       <- Contains all system configurations
+
+docker/
+├── Dockerfile.backend                   <- Backend container configuration
+├── Dockerfile.frontend                  <- Frontend container configuration
+└── docker-compose.yml                   <- System deployment configuration
+-------------------------------------------------------------------------------------------------------
+
+create_structure.py
+directory_structure.txt
+folder_structure.txt
+package.json
+src/
+src/example.py
+src/components/
+src/components/YourComponent.tsx
+trading-system/
+trading-system/__init__.py
+trading-system/.eslintrc.json
+trading-system/.prettierrc.json
+trading-system/get-clean-tree.ps1
+trading-system/get-main-structure.ps1
+trading-system/get-project-tree.ps1
+trading-system/README.md
+trading-system/setup.py
+trading-system/tsconfig.json
+trading-system/backend/
+trading-system/backend/requirements.txt
+trading-system/backend/TA_Lib-0.4.32-cp312-cp312-win_amd64.whl
+trading-system/backend/config/
+trading-system/backend/config/development.yml
+trading-system/backend/config/production.yml
+trading-system/backend/config/test.yml
+trading-system/backend/src/
+trading-system/backend/src/__init__.py
+trading-system/backend/src/main.py
+trading-system/backend/src/analysis/
+trading-system/backend/src/api/
+trading-system/backend/src/data/
+trading-system/backend/src/execution/
+trading-system/backend/src/models/
+trading-system/backend/src/monitoring/
+trading-system/backend/src/risk/
+trading-system/backend/tests/
+trading-system/backend/tests/integration
+trading-system/backend/tests/performance
+trading-system/backend/tests/unit
+trading-system/backend/trading_system.egg-info/
+trading-system/backend/trading_system.egg-info/dependency_links.txt
+trading-system/backend/trading_system.egg-info/PKG-INFO
+trading-system/backend/trading_system.egg-info/requires.txt
+trading-system/backend/trading_system.egg-info/SOURCES.txt
+trading-system/backend/trading_system.egg-info/top_level.txt
+trading-system/config/
+trading-system/create/
+trading-system/create/update
+trading-system/docker/
+trading-system/docker/docker-compose.yml
+trading-system/docker/Dockerfile.backend
+trading-system/docker/Dockerfile.frontend
+trading-system/frontend/
+trading-system/frontend/.gitignore
+trading-system/frontend/.nvmrc
+trading-system/frontend/jest.config.js
+trading-system/frontend/package-lock.json
+trading-system/frontend/package.json
+trading-system/frontend/README.md
+trading-system/frontend/tsconfig.json
+trading-system/frontend/public/
+trading-system/frontend/public/assets
+trading-system/frontend/public/index.html
+trading-system/frontend/scripts/
+trading-system/frontend/scripts/set-node-options.js
+trading-system/frontend/src/
+trading-system/frontend/src/App.tsx
+trading-system/frontend/src/eslintrc.js
+trading-system/frontend/src/index.tsx
+trading-system/frontend/src/prettierrc
+trading-system/frontend/src/react-app-env.d.ts
+trading-system/frontend/src/components/
+trading-system/frontend/src/contexts/
+trading-system/frontend/src/hooks/
+trading-system/frontend/src/services/
+trading-system/frontend/src/types/
+trading-system/frontend/src/utils/
+trading-system/scripts/
+trading-system/scripts/deploy.sh
+trading-system/scripts/maintenance.sh
+trading-system/scripts/set-node-options.js
+trading-system/scripts/setup.sh
+trading-system/src/
+trading-system/src/components/
+trading-system/src/contexts/
+trading-system/src/hooks/
+trading-system/src/services/
+trading-system/src/types/
+trading-system/src/types/lucide-react.d.ts
+trading-system/src/utils/
+trading-system/trading_system.egg-info/
+trading-system/trading_system.egg-info/dependency_links.txt
+trading-system/trading_system.egg-info/PKG-INFO
+trading-system/trading_system.egg-info/requires.txt
+trading-system/trading_system.egg-info/SOURCES.txt
+trading-system/trading_system.egg-info/top_level.txt
+trading-system-venv/
+trading-system-venv/pyvenv.cfg
+trading-system-venv/Include/
+trading-system-venv/Lib/
+trading-system-venv/Lib/site-packages/
+trading-system-venv/Lib/site-packages/__editable___trading_system_0_1_0_finder.py
+trading-system-venv/Lib/site-packages/__editable__.trading_system-0.1.0.pth
+trading-system-venv/Lib/site-packages/numpy-2.1.3-cp312-cp312-win_amd64.whl
+trading-system-venv/Lib/site-packages/peewee.py
+trading-system-venv/Lib/site-packages/pwiz.py
+trading-system-venv/Lib/site-packages/six.py
+trading-system-venv/Lib/site-packages/typing_extensions.py
+trading-system-venv/Lib/site-packages/_yaml/
+trading-system-venv/Lib/site-packages/annotated_types/
+trading-system-venv/Lib/site-packages/annotated_types-0.7.0.dist-info/
+trading-system-venv/Lib/site-packages/anyio/
+trading-system-venv/Lib/site-packages/anyio-4.6.2.post1.dist-info/
+trading-system-venv/Lib/site-packages/beautifulsoup4-4.12.3.dist-info/
+trading-system-venv/Lib/site-packages/bs4/
+trading-system-venv/Lib/site-packages/certifi/
+trading-system-venv/Lib/site-packages/certifi-2024.8.30.dist-info/
+trading-system-venv/Lib/site-packages/charset_normalizer/
+trading-system-venv/Lib/site-packages/charset_normalizer-3.4.0.dist-info/
+trading-system-venv/Lib/site-packages/click/
+trading-system-venv/Lib/site-packages/click-8.1.7.dist-info/
+trading-system-venv/Lib/site-packages/colorama/
+trading-system-venv/Lib/site-packages/colorama-0.4.6.dist-info/
+trading-system-venv/Lib/site-packages/dateutil/
+trading-system-venv/Lib/site-packages/dotenv/
+trading-system-venv/Lib/site-packages/fastapi/
+trading-system-venv/Lib/site-packages/fastapi-0.115.4.dist-info/
+trading-system-venv/Lib/site-packages/frozendict/
+trading-system-venv/Lib/site-packages/frozendict-2.4.6.dist-info/
+trading-system-venv/Lib/site-packages/h11/
+trading-system-venv/Lib/site-packages/h11-0.14.0.dist-info/
+trading-system-venv/Lib/site-packages/html5lib/
+trading-system-venv/Lib/site-packages/html5lib-1.1.dist-info/
+trading-system-venv/Lib/site-packages/idna/
+trading-system-venv/Lib/site-packages/idna-3.10.dist-info/
+trading-system-venv/Lib/site-packages/lxml/
+trading-system-venv/Lib/site-packages/lxml-5.3.0.dist-info/
+trading-system-venv/Lib/site-packages/multitasking/
+trading-system-venv/Lib/site-packages/multitasking-0.0.11.dist-info/
+trading-system-venv/Lib/site-packages/numpy/
+trading-system-venv/Lib/site-packages/numpy-2.1.3.dist-info/
+trading-system-venv/Lib/site-packages/numpy.libs/
+trading-system-venv/Lib/site-packages/pandas/
+trading-system-venv/Lib/site-packages/pandas-2.2.3.dist-info/
+trading-system-venv/Lib/site-packages/pandas.libs/
+trading-system-venv/Lib/site-packages/peewee-3.17.7.dist-info/
+trading-system-venv/Lib/site-packages/pip/
+trading-system-venv/Lib/site-packages/pip-24.2.dist-info/
+trading-system-venv/Lib/site-packages/platformdirs/
+trading-system-venv/Lib/site-packages/platformdirs-4.3.6.dist-info/
+trading-system-venv/Lib/site-packages/playhouse/
+trading-system-venv/Lib/site-packages/pydantic/
+trading-system-venv/Lib/site-packages/pydantic_core/
+trading-system-venv/Lib/site-packages/pydantic_core-2.23.4.dist-info/
+trading-system-venv/Lib/site-packages/pydantic-2.9.2.dist-info/
+trading-system-venv/Lib/site-packages/python_dateutil-2.9.0.post0.dist-info/
+trading-system-venv/Lib/site-packages/python_dotenv-1.0.1.dist-info/
+trading-system-venv/Lib/site-packages/pytz/
+trading-system-venv/Lib/site-packages/pytz-2024.2.dist-info/
+trading-system-venv/Lib/site-packages/PyYAML-6.0.2.dist-info/
+trading-system-venv/Lib/site-packages/requests/
+trading-system-venv/Lib/site-packages/requests-2.32.3.dist-info/
+trading-system-venv/Lib/site-packages/six-1.16.0.dist-info/
+trading-system-venv/Lib/site-packages/sniffio/
+trading-system-venv/Lib/site-packages/sniffio-1.3.1.dist-info/
+trading-system-venv/Lib/site-packages/soupsieve/
+trading-system-venv/Lib/site-packages/soupsieve-2.6.dist-info/
+trading-system-venv/Lib/site-packages/starlette/
+trading-system-venv/Lib/site-packages/starlette-0.41.2.dist-info/
+trading-system-venv/Lib/site-packages/trading_system-0.1.0.dist-info/
+trading-system-venv/Lib/site-packages/typing_extensions-4.12.2.dist-info/
+trading-system-venv/Lib/site-packages/tzdata/
+trading-system-venv/Lib/site-packages/tzdata-2024.2.dist-info/
+trading-system-venv/Lib/site-packages/urllib3/
+trading-system-venv/Lib/site-packages/urllib3-2.2.3.dist-info/
+trading-system-venv/Lib/site-packages/uvicorn/
+trading-system-venv/Lib/site-packages/uvicorn-0.32.0.dist-info/
+trading-system-venv/Lib/site-packages/webencodings/
+trading-system-venv/Lib/site-packages/webencodings-0.5.1.dist-info/
+trading-system-venv/Lib/site-packages/yaml/
+trading-system-venv/Lib/site-packages/yfinance/
+trading-system-venv/Lib/site-packages/yfinance-0.2.48.dist-info/
+trading-system-venv/Scripts/
+trading-system-venv/Scripts/activate
+trading-system-venv/Scripts/activate.bat
+trading-system-venv/Scripts/Activate.ps1
+trading-system-venv/Scripts/deactivate.bat
+trading-system-venv/Scripts/dotenv.exe
+trading-system-venv/Scripts/f2py.exe
+trading-system-venv/Scripts/fastapi.exe
+trading-system-venv/Scripts/normalizer.exe
+trading-system-venv/Scripts/numpy-config.exe
+trading-system-venv/Scripts/pip.exe
+trading-system-venv/Scripts/pip3.12.exe
+trading-system-venv/Scripts/pip3.exe
+trading-system-venv/Scripts/pwiz.py
+trading-system-venv/Scripts/python.exe
+trading-system-venv/Scripts/pythonw.exe
+trading-system-venv/Scripts/sample.exe
+trading-system-venv/Scripts/uvicorn.exe

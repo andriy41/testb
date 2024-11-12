@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --positive-color: #2ecc71;
+  --negative-color: #e74c3c;
+  --neutral-color: #f39c12;
+  --background-color: #ecf0f1;
+  --text-color: #34495e;
+}
+
+body {
+  font-family: 'Inter', 'Arial', sans-serif;
+  background-color: var(--background-color);
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.dashboard-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.positive-change {
+  color: var(--positive-color);
+}
+
+.negative-change {
+  color: var(--negative-color);
+}
+
+.neutral-change {
+  color: var(--neutral-color);
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Advanced chart and indicator styles */
+.chart-container {
+  width: 100%;
+  height: 300px;
+}
+
+.technical-indicator {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.risk-metric {
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}

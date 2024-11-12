@@ -1,0 +1,51 @@
+# Create/update config files
+$configFiles = @{
+    "tsconfig.json" = '{
+        "compilerOptions": {
+            "target": "es5",
+            "lib": ["dom", "dom.iterable", "esnext"],
+            "allowJs": true,
+            "skipLibCheck": true,
+            "esModuleInterop": true,
+            "allowSyntheticDefaultImports": true,
+            "strict": true,
+            "forceConsistentCasingInFileNames": true,
+            "noFallthroughCasesInSwitch": true,
+            "module": "esnext",
+            "moduleResolution": "node",
+            "resolveJsonModule": true,
+            "isolatedModules": true,
+            "noEmit": true,
+            "jsx": "react-jsx",
+            "baseUrl": "src"
+        },
+        "include": ["src"]
+    }'
+
+    ".eslintrc.js" = 'module.exports = {
+        parser: "@typescript-eslint/parser",
+        extends: [
+            "eslint:recommended",
+            "plugin:react/recommended",
+            "plugin:@typescript-eslint/recommended",
+            "prettier"
+        ],
+        plugins: ["react-hooks"],
+        rules: {
+            "react-hooks/rules-of-hooks": "error",
+            "react-hooks/exhaustive-deps": "warn"
+        }
+    }'
+
+    ".prettierrc" = '{
+        "semi": true,
+        "trailingComma": "es5",
+        "singleQuote": true,
+        "printWidth": 100,
+        "tabWidth": 2
+    }'
+}
+
+foreach ($file in $configFiles.Keys) {
+    $configFiles[$file] | Out-File -FilePath $file -Encoding UTF8
+}

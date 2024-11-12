@@ -1,0 +1,88 @@
+Project Structure:
+
+├── create_structure.py
+├── directory_structure.txt
+├── folder_structure.txt
+├── package.json
+├── src/
+│   ├── example.py
+│   └── components/
+│       └── YourComponent.tsx
+│
+├── trading-system/                  # Main trading system project
+│   ├── __init__.py
+│   ├── .eslintrc.json              # ESLint configuration
+│   ├── .prettierrc.json            # Prettier configuration
+│   ├── setup.py                    # Python package setup
+│   ├── tsconfig.json               # TypeScript configuration
+│   ├── README.md
+│   │
+│   ├── backend/                    # Python backend
+│   │   ├── requirements.txt        # Python dependencies
+│   │   ├── config/
+│   │   │   ├── development.yml
+│   │   │   ├── production.yml
+│   │   │   └── test.yml
+│   │   ├── src/
+│   │   │   ├── __init__.py
+│   │   │   ├── main.py
+│   │   │   ├── analysis/          # Trading analysis modules
+│   │   │   ├── api/               # API endpoints
+│   │   │   ├── data/              # Data handling
+│   │   │   ├── execution/         # Trade execution
+│   │   │   ├── models/            # Data models
+│   │   │   ├── monitoring/        # System monitoring
+│   │   │   └── risk/              # Risk management
+│   │   └── tests/
+│   │       ├── integration/
+│   │       ├── performance/
+│   │       └── unit/
+│   │
+│   ├── frontend/                   # React frontend
+│   │   ├── public/
+│   │   │   ├── assets/
+│   │   │   └── index.html
+│   │   ├── src/
+│   │   │   ├── App.tsx
+│   │   │   ├── index.tsx
+│   │   │   ├── components/
+│   │   │   ├── contexts/
+│   │   │   ├── hooks/
+│   │   │   ├── services/
+│   │   │   ├── types/
+│   │   │   └── utils/
+│   │   ├── scripts/
+│   │   │   └── set-node-options.js
+│   │   ├── package.json
+│   │   ├── tsconfig.json
+│   │   └── jest.config.js
+│   │
+│   ├── docker/                     # Docker configuration
+│   │   ├── docker-compose.yml
+│   │   ├── Dockerfile.backend
+│   │   └── Dockerfile.frontend
+│   │
+│   └── scripts/                    # Utility scripts
+│       ├── deploy.sh
+│       ├── maintenance.sh
+│       ├── set-node-options.js
+│       └── setup.sh
+│
+└── trading-system-venv/            # Python virtual environment
+
+Key Components:
+1. Backend (Python/FastAPI):
+   - Modular architecture with separate concerns (analysis, execution, risk, etc.)
+   - Configuration management for different environments
+   - Comprehensive test suite (unit, integration, performance)
+
+2. Frontend (React/TypeScript):
+   - Component-based architecture
+   - Type safety with TypeScript
+   - Organized structure (components, contexts, hooks, services)
+   - Testing setup with Jest
+
+3. Infrastructure:
+   - Docker containerization for both frontend and backend
+   - Deployment and maintenance scripts
+   - Environment-specific configurations

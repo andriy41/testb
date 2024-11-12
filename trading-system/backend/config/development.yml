@@ -1,0 +1,81 @@
+# Server Configuration
+server:
+  host: "0.0.0.0"
+  port: 8000
+  debug: true
+  reload: true
+
+# Database Configuration
+database:
+  host: "localhost"
+  port: 5432
+  name: "trading_system_dev"
+  user: "postgres"
+  password: "postgres"
+  pool_size: 20
+  max_overflow: 10
+
+# API Configuration
+api:
+  version: "v1"
+  prefix: "/api"
+  cors_origins: ["http://localhost:3000"]
+
+# Market Data Configuration
+market_data:
+  providers:
+    - name: "yfinance"
+      enabled: true
+      rate_limit: 2000  # requests per hour
+    - name: "alpha_vantage"
+      enabled: true
+      rate_limit: 500   # requests per minute
+      api_key: "${ALPHA_VANTAGE_API_KEY}"
+
+# ML Configuration
+ml:
+  model_path: "./models"
+  training:
+    batch_size: 32
+    epochs: 100
+    validation_split: 0.2
+  inference:
+    batch_size: 64
+    threshold: 0.75
+
+# Monitoring Configuration
+monitoring:
+  prometheus:
+    enabled: true
+    port: 9090
+  grafana:
+    enabled: true
+    port: 3001
+
+# Logging Configuration
+logging:
+  level: "DEBUG"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/development.log"
+
+# Cache Configuration
+cache:
+  type: "redis"
+  host: "localhost"
+  port: 6379
+  ttl: 3600  # seconds
+
+# WebSocket Configuration
+websocket:
+  enabled: true
+  path: "/ws"
+  ping_interval: 30
+  ping_timeout: 10
+
+# Security Configuration
+security:
+  jwt:
+    secret_key: "${JWT_SECRET_KEY}"
+    algorithm: "HS256"
+    access_token_expire_minutes: 30
+    refresh_token_expire_days: 7

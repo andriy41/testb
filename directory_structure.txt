@@ -1,0 +1,99 @@
+trading-system/
+├── backend/
+│   ├── src/
+│   │   ├── data/
+│   │   │   ├── __init__.py
+│   │   │   ├── data_manager.py
+│   │   │   ├── market_data.py
+│   │   │   └── yfinance_fetcher.py
+│   │   ├── analysis/
+│   │   │   ├── __init__.py
+│   │   │   ├── market_analyzer.py
+│   │   │   ├── technical_analyzer.py
+│   │   │   ├── ml_analyzer.py
+│   │   │   ├── fakeout_detector.py
+│   │   │   └── manipulation_detector.py
+│   │   ├── models/
+│   │   │   ├── __init__.py
+│   │   │   ├── base_model.py
+│   │   │   ├── ml_models.py
+│   │   │   └── signal_generator.py
+│   │   ├── risk/
+│   │   │   ├── __init__.py
+│   │   │   ├── risk_manager.py
+│   │   │   ├── position_sizer.py
+│   │   │   └── risk_calculator.py
+│   │   ├── execution/
+│   │   │   ├── __init__.py
+│   │   │   ├── execution_engine.py
+│   │   │   └── order_manager.py
+│   │   ├── monitoring/
+│   │   │   ├── __init__.py
+│   │   │   ├── system_monitor.py
+│   │   │   └── alert_manager.py
+│   │   └── api/
+│   │       ├── __init__.py
+│   │       ├── routes.py
+│   │       └── websocket.py
+│   ├── tests/
+│   │   ├── unit/
+│   │   ├── integration/
+│   │   └── performance/
+│   ├── config/
+│   │   ├── production.yml
+│   │   ├── development.yml
+│   │   └── test.yml
+│   └── requirements.txt
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── charts/
+│   │   │   │   ├── CandlestickChart.tsx
+│   │   │   │   ├── InteractivePriceChart.tsx
+│   │   │   │   ├── TechnicalChart.tsx
+│   │   │   │   └── VolumeChart.tsx
+│   │   │   ├── dashboard/
+│   │   │   │   ├── MainDashboard.tsx
+│   │   │   │   ├── TradingDashboard.tsx
+│   │   │   │   ├── MLTradingMonitor.tsx
+│   │   │   │   └── AdvancedAnalysisDashboard.tsx
+│   │   │   ├── panels/
+│   │   │   │   ├── SignalsPanel.tsx
+│   │   │   │   ├── IndicatorsPanel.tsx
+│   │   │   │   ├── RiskManagementPanel.tsx
+│   │   │   │   └── PriceTargetsPanel.tsx
+│   │   │   ├── analysis/
+│   │   │   │   ├── TechnicalAnalysis.tsx
+│   │   │   │   ├── MarketAnalysis.tsx
+│   │   │   │   └── MLAnalysis.tsx
+│   │   │   └── common/
+│   │   │       ├── Card.tsx
+│   │   │       ├── Button.tsx
+│   │   │       └── Alert.tsx
+│   │   ├── hooks/
+│   │   │   ├── useMarketData.ts
+│   │   │   ├── useIndicators.ts
+│   │   │   └── useTrading.ts
+│   │   ├── services/
+│   │   │   ├── api.ts
+│   │   │   ├── websocket.ts
+│   │   │   └── marketData.ts
+│   │   ├── utils/
+│   │   │   ├── formatters.ts
+│   │   │   └── indicators.ts
+│   │   └── types/
+│   │       ├── market.ts
+│   │       └── trading.ts
+│   ├── public/
+│   │   └── assets/
+│   ├── package.json
+│   └── tsconfig.json
+├── docker/
+│   ├── Dockerfile.backend
+│   ├── Dockerfile.frontend
+│   └── docker-compose.yml
+├── scripts/
+│   ├── setup.sh
+│   ├── deploy.sh
+│   └── maintenance.sh
+└── README.md

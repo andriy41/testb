@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Trading System Frontend",
+            "program": "${workspaceFolder}/frontend/src/index.tsx",
+            "args": [],
+            "cwd": "${workspaceFolder}/frontend",
+            "runtimeExecutable": "node",
+            "env": {
+                "NODE_ENV": "development"
+            }
+        }
+    ]
+}
